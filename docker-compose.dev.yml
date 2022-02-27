@@ -39,7 +39,7 @@ services:
     container_name: postgres
     restart: always
     environment:
-      - POSTGRES_DB=postgres_db
+      - POSTGRES_DB=test_db
       - POSTGRES_USER=postgres
       - POSTGRES_PASSWORD=postgres
       - DB_SCHEMA=postgres
