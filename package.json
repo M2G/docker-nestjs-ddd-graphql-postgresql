@@ -93,6 +93,14 @@
       "post-merge": "git diff-tree -r --name-only --no-commit-id ORIG_HEAD HEAD | grep --quiet package-lock.json && npm ci"
     }
   },
+  "lint-staged": {
+    "*.(ts|tsx|graphql)": [
+      "prettier --write  --ignore-path .eslintignore"
+    ],
+    "*.(ts|tsx)": [
+      "eslint --fix"
+    ]
+  },
   "jest": {
     "moduleFileExtensions": [
       "js",
